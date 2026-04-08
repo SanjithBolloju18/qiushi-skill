@@ -17,7 +17,7 @@
     --color-border: rgba(139, 26, 26, 0.28);
     --color-paper: rgba(255, 252, 245, 0.74);
     --font-primary: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
-    --max-width: 860px;
+    --max-width: 1032px;
     --shadow-frame: inset 0 0 0 9px var(--color-bg), inset 0 0 0 10.5px var(--color-primary);
     --transition-fast: 180ms ease;
   }
@@ -39,7 +39,7 @@
       radial-gradient(circle at bottom right, rgba(107, 90, 74, 0.08), transparent 36%),
       repeating-linear-gradient(0deg, transparent, transparent 84px, rgba(139, 26, 26, 0.035) 84px, rgba(139, 26, 26, 0.035) 85px),
       var(--color-bg);
-    line-height: 1.8;
+    line-height: 1.72;
     letter-spacing: 0.02em;
   }
 
@@ -67,7 +67,7 @@
     position: relative;
     border: 4px solid var(--color-primary);
     box-shadow: var(--shadow-frame);
-    padding: calc(10.5px + 24px);
+    padding: calc(10.5px + 18px);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent 56%), var(--color-paper);
   }
 
@@ -85,7 +85,7 @@
   }
 
   .section {
-    margin-top: 38px;
+    margin-top: 32px;
   }
 
   .section-heading {
@@ -383,6 +383,12 @@
     letter-spacing: 0.24em;
   }
 
+  .weapon-icon {
+    margin-bottom: 8px;
+    font-size: 1.45rem;
+    line-height: 1;
+  }
+
   .weapon-card h3 {
     margin: 0;
     color: var(--color-primary);
@@ -543,7 +549,7 @@
     }
 
     .frame {
-      padding: calc(10.5px + 20px);
+      padding: calc(10.5px + 16px);
     }
 
     .hero-title {
@@ -721,12 +727,12 @@
 
     <section class="frame section reveal" id="weapons">
       <span class="section-label">九大思想武器</span>
-      <p class="section-kicker">三乘三卡片网格</p>
       <h2 class="section-heading">把“会做事”升级为“会想事、会推进、会纠偏”。</h2>
       <p class="section-intro">每一件武器都有明确的核心要义、原著出处和适用场景，它们组合起来，构成 AI Agent 的工作纪律。</p>
       <div class="weapons-grid">
         <article class="weapon-card">
           <div class="weapon-no">01</div>
+          <div class="weapon-icon">⚔️</div>
           <h3>矛盾分析法</h3>
           <p class="weapon-keyword">核心要义：抓主要矛盾</p>
           <p class="weapon-source">原著出处：《矛盾论》</p>
@@ -734,6 +740,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">02</div>
+          <div class="weapon-icon">🔄</div>
           <h3>实践认识论</h3>
           <p class="weapon-keyword">核心要义：实践 → 认识 → 再实践</p>
           <p class="weapon-source">原著出处：《实践论》</p>
@@ -741,6 +748,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">03</div>
+          <div class="weapon-icon">🔎</div>
           <h3>调查研究</h3>
           <p class="weapon-keyword">核心要义：没有调查就没有发言权</p>
           <p class="weapon-source">原著出处：《反对本本主义》</p>
@@ -748,6 +756,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">04</div>
+          <div class="weapon-icon">👥</div>
           <h3>群众路线</h3>
           <p class="weapon-keyword">核心要义：从群众中来，到群众中去</p>
           <p class="weapon-source">原著出处：《关于领导方法的若干问题》</p>
@@ -755,6 +764,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">05</div>
+          <div class="weapon-icon">🪞</div>
           <h3>批评与自我批评</h3>
           <p class="weapon-keyword">核心要义：惩前毖后，治病救人</p>
           <p class="weapon-source">原著出处：《论联合政府》</p>
@@ -762,6 +772,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">06</div>
+          <div class="weapon-icon">⏳</div>
           <h3>持久战略</h3>
           <p class="weapon-keyword">核心要义：战略上藐视，战术上重视</p>
           <p class="weapon-source">原著出处：《论持久战》</p>
@@ -769,6 +780,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">07</div>
+          <div class="weapon-icon">🎯</div>
           <h3>集中兵力</h3>
           <p class="weapon-keyword">核心要义：伤其十指不如断其一指</p>
           <p class="weapon-source">原著出处：《中国革命战争的战略问题》</p>
@@ -776,6 +788,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">08</div>
+          <div class="weapon-icon">🔥</div>
           <h3>星火燎原</h3>
           <p class="weapon-keyword">核心要义：建立根据地，不做流寇</p>
           <p class="weapon-source">原著出处：《星星之火，可以燎原》</p>
@@ -783,6 +796,7 @@
         </article>
         <article class="weapon-card">
           <div class="weapon-no">09</div>
+          <div class="weapon-icon">⚖️</div>
           <h3>统筹兼顾</h3>
           <p class="weapon-keyword">核心要义：调动一切积极因素</p>
           <p class="weapon-source">原著出处：《论十大关系》</p>
@@ -845,10 +859,10 @@
 
     <section class="frame section reveal" id="platforms">
       <span class="section-label">平台支持</span>
-      <p class="section-kicker">多宿主可接入</p>
+      <p class="section-kicker">多Client可接入</p>
       <h2 class="section-heading">不把方法论锁死在单一工具里。</h2>
       <p class="section-intro">
-        项目的核心资产是 `skills/`、`commands/` 和 `hooks/`。宿主平台不同，接入方式不同，但方法论本身不依赖单一平台。
+        项目的核心资产是 `skills/`、`commands/` 和 `hooks/`。Client平台不同，接入方式不同，但方法论本身不依赖单一平台。
       </p>
       <div class="platforms-grid">
         <article class="platform-card">
@@ -874,10 +888,10 @@
         <article class="platform-card">
           <span class="platform-chip">Codex</span>
           <h3>原生文档入口，不依赖插件壳</h3>
-          <p>通过 `.codex/INSTALL.md` 提供原生安装与接入说明，按宿主能力选择命令层支持方式。</p>
+          <p>通过 `.codex/INSTALL.md` 提供原生安装与接入说明，按Client能力选择命令层支持方式。</p>
           <ul class="platform-list">
             <li>安装入口：`.codex/INSTALL.md`</li>
-            <li>命令支持视宿主能力而定</li>
+            <li>命令支持视Client能力而定</li>
             <li>验证方式：按文档自检</li>
           </ul>
         </article>
@@ -887,12 +901,12 @@
           <p>通过 `.opencode/INSTALL.md` 提供接入说明，保持与核心方法论目录结构的一致性。</p>
           <ul class="platform-list">
             <li>安装入口：`.opencode/INSTALL.md`</li>
-            <li>命令支持视宿主能力而定</li>
+            <li>命令支持视Client能力而定</li>
             <li>验证方式：按文档自检</li>
           </ul>
         </article>
       </div>
-      <p class="platform-note">除以上四个平台外，其他宿主也可直接复用 `skills/` 与 `commands/`，只要它支持 system prompt 注入或手动指令加载。</p>
+      <p class="platform-note">除以上四个平台外，其他Client也可直接复用 `skills/` 与 `commands/`，只要它支持 system prompt 注入或手动指令加载。</p>
     </section>
 
     <div class="quote-divider reveal" aria-hidden="true">
