@@ -928,55 +928,54 @@
     </section>
 
     <section class="frame section reveal" id="platforms">
-      <span class="section-label">平台支持</span>
-      <p class="section-kicker">多Client可接入</p>
-      <h2 class="section-heading">不把方法论锁死在单一工具里。</h2>
+      <span class="section-label">安装方式</span>
+      <p class="section-kicker">新版接入链路</p>
+      <h2 class="section-heading">优先走标准安装器，其次走官方与原生入口。</h2>
       <p class="section-intro">
-        项目的核心资产是 `skills/`、`commands/` 和 `hooks/`。Client平台不同，接入方式不同，但方法论本身不依赖单一平台。
+        当前推荐的安装顺序已经更新：先用 `npx qiushi-skill` 标准安装器；Claude Code 可直接走官方 Marketplace；Codex、OpenCode、OpenClaw、Hermes 则按各自原生文档接入。
       </p>
       <div class="platforms-grid">
         <article class="platform-card">
+          <span class="platform-chip">首推</span>
+          <h3>`npx qiushi-skill` 一键安装</h3>
+          <p>默认进入交互式安装；也支持非交互命令。Node.js `18.17+` 环境下，这是当前最推荐的标准入口。</p>
+          <ul class="platform-list">
+            <li>启动安装：`npx qiushi-skill`</li>
+            <li>定向安装：`npx qiushi-skill install --target claude-code --scope user`</li>
+            <li>统一验证：`npx qiushi-skill validate`</li>
+          </ul>
+        </article>
+        <article class="platform-card">
           <span class="platform-chip">Claude Code</span>
-          <h3>插件安装 + 自动注入 + 命令入口</h3>
-          <p>完整支持插件目录、SessionStart 注入与命令文件，是当前最完整的一条接入路径。</p>
+          <h3>官方 Marketplace 直接安装</h3>
+          <p>仓库已提供 `.claude-plugin/marketplace.json`，可直接从 GitHub 仓库发现并安装。</p>
           <ul class="platform-list">
-            <li>支持自动注入</li>
-            <li>支持手动命令</li>
-            <li>验证入口：`tests/validate.ps1`</li>
+            <li>`/plugin marketplace add HughYau/qiushi-skill`</li>
+            <li>`/plugin install qiushi-skill@qiushi-skill`</li>
+            <li>安装后仍可用 `npx qiushi-skill validate` 自检</li>
           </ul>
         </article>
         <article class="platform-card">
-          <span class="platform-chip">Cursor</span>
-          <h3>元数据接入 + 命令文件 + 验证脚本</h3>
-          <p>支持元数据与 hook 配置识别，同时保留仓库内命令文件，方便在 IDE 场景下调用。</p>
+          <span class="platform-chip">原生入口</span>
+          <h3>Codex / OpenCode / OpenClaw / Hermes 按文档接入</h3>
+          <p>这些平台已经分别提供独立的安装说明，按各自原生能力加载 `skills/`、`commands/` 或对应 bundle 即可。</p>
           <ul class="platform-list">
-            <li>支持元数据与 hook</li>
-            <li>支持手动命令</li>
-            <li>验证入口：`tests/validate.ps1`</li>
+            <li>Codex：`.codex/INSTALL.md`</li>
+            <li>OpenCode / OpenClaw / Hermes：各自 `INSTALL.md`</li>
+            <li>细节文档见 `docs/README.*.md`</li>
           </ul>
         </article>
         <article class="platform-card">
-          <span class="platform-chip">Codex</span>
-          <h3>原生文档入口，不依赖插件壳</h3>
-          <p>通过 `.codex/INSTALL.md` 提供原生安装与接入说明，按Client能力选择命令层支持方式。</p>
+          <span class="platform-chip">通用</span>
+          <h3>源码手动接入与兜底验证</h3>
+          <p>如果不走标准安装器，也可以直接复用仓库内的 `skills/` 与 `commands/`，并用仓库脚本做平台兜底校验。</p>
           <ul class="platform-list">
-            <li>安装入口：`.codex/INSTALL.md`</li>
-            <li>命令支持视Client能力而定</li>
-            <li>验证方式：按文档自检</li>
-          </ul>
-        </article>
-        <article class="platform-card">
-          <span class="platform-chip">OpenCode</span>
-          <h3>原生文档入口，不依赖插件壳</h3>
-          <p>通过 `.opencode/INSTALL.md` 提供接入说明，保持与核心方法论目录结构的一致性。</p>
-          <ul class="platform-list">
-            <li>安装入口：`.opencode/INSTALL.md`</li>
-            <li>命令支持视Client能力而定</li>
-            <li>验证方式：按文档自检</li>
+            <li>通用复用：`skills/` + `commands/`</li>
+            <li>macOS / Linux：`tests/validate.sh`</li>
+            <li>Windows：`tests/validate.ps1`</li>
           </ul>
         </article>
       </div>
-      <p class="platform-note">除以上四个平台外，其他Client也可直接复用 `skills/` 与 `commands/`，只要它支持 system prompt 注入或手动指令加载。</p>
     </section>
 
     <div class="quote-divider reveal" aria-hidden="true">
@@ -989,6 +988,7 @@
         <a class="button button-primary" href="https://github.com/HughYau/qiushi-skill" target="_blank" rel="noreferrer">★ 给仓库加星</a>
       </div>
       <p class="footer-note">MIT License · GitHub Pages /docs 部署</p>
+      <p class="footer-note">本项目仅为方法论研究与工程应用，所有引用均出自公开出版物（《毛泽东选集》人民出版社版），引用目的为学术性方法提炼。项目不涉及任何政治立场、不对原著作政治性再诠释、不代表任何组织或个人观点。如涉侵权或不当使用请联系作者删除。</p>
     </footer>
   </main>
 
